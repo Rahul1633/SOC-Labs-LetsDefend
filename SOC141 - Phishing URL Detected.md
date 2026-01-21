@@ -30,14 +30,26 @@
 
 **The extracted URL was analyzed using VirusTotal. The URL was flagged as suspicious, indicating potential phishing activity associated with the domain.**
 
-### 6. Containment
+### 3. Containment
 
 - The affected endpoint (**EmilyComp**) was isolated to prevent lateral movement or further compromise.
 <img width="1107" height="546" alt="image" src="https://github.com/user-attachments/assets/1c577938-7e21-4edf-8ccf-9fa99f936879" />
 
 ---
 
+## Artifacts / IOCs
+
+- **Source Hostname**: EmilyComp  
+- **Destination Hostname**: Felix@letsdefend.io  
+- **Request URL**:http://mogagrocol.ru/wp-content/plugins/akismet/fv/index.php?email=ellie@letsdefend.io
+- **File Hash (SHA-256)**: 00ad45f92e9c486e70681ca2d18433cd96fb4df1b877f7975d271bbd6d38b750
 
 
+---
 
+## Case Disposition
+
+- **Verdict**: TRUE POSITIVE  
+- **Analysis Notes**:  
+Proxy logs were reviewed and confirmed that an internal device accessed the detected phishing URL. The URL was verified as suspicious via VirusTotal.
 
